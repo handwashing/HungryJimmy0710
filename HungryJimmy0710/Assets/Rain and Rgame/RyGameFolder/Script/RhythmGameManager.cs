@@ -86,15 +86,14 @@ public class RhythmGameManager : MonoBehaviour
 
                     string rankVal = "F"; //default rank value
 
-                    if(totalHit > 400)
+                    if(normalHits > 4f)
                     {
                         rankVal = "water";
-                        if(totalHit < 500)
-                        {
-                            rankVal = "Thirsty";
+                    }
 
-                            
-                        }
+                    else if(normalHits < 5f)
+                    {
+                            rankVal = "Thirsty";                          
                     }
 
                     rankText.text = rankVal; //점수판에 나타날  최종 랭크
