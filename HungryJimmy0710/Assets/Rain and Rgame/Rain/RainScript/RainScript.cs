@@ -10,6 +10,7 @@ namespace DigitalRuby.RainMaker
 {
     public class RainScript : BaseRainScript
     {
+    
         public float lifetime = 15f;
 
         [Tooltip("The height above the camera that the rain will start falling from")]
@@ -61,6 +62,7 @@ namespace DigitalRuby.RainMaker
 
         protected override void Start()
         {
+
             base.Start();
         }
 

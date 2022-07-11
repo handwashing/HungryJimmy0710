@@ -34,6 +34,8 @@ public class RhythmGameManager : MonoBehaviour
     public float missedHits;
 
     public GameObject rgstButton; //리듬게임(기우제) 버튼
+    public GameObject rainButton; //비를 내리게 하는 버튼(일정 점수 이상 획득 시)
+    public GameObject backButton; //메인 화면으로 돌아가는 버튼 (일정 점수 이상 획득 x)
     public GameObject gamePanel;
     public GameObject resultsScreen; //점수 요소 가져다쓰려고 참조 쓰기 /점수 팝업으로 점수 보여주기
     //public Text percentHitText, normalsText, goodsText, perfectsText, missesText, rankText, finalScoreText; //점수판에 나타날 각 점수들
@@ -88,12 +90,14 @@ public class RhythmGameManager : MonoBehaviour
 
                     if(normalHits > 4f)
                     {
-                        rankVal = "water";
+                        rankVal = "Rain!";
+                        rainButton.SetActive(true);
                     }
 
                     else if(normalHits < 5f)
                     {
-                            rankVal = "Thirsty";                          
+                        rankVal = "Thirsty";     
+                        backButton.SetActive(true);                     
                     }
 
                     rankText.text = rankVal; //점수판에 나타날  최종 랭크
