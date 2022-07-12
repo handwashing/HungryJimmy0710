@@ -11,7 +11,7 @@ public class BeatScroller : MonoBehaviour
     {//우리가 설정한 비트 템포가 무엇이든 여기에 사용되어야 함
     //모든 비트를 60으로 나누어 -> 초당 얼마나 빨리 움직여야 하는지 알려줌
     //120에서는 초당 2단위로 움직여야 함
-        beatTempo = beatTempo / 20f;
+        beatTempo = beatTempo / 5f;
     }
 
     void Update()
